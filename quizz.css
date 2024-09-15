@@ -1,3 +1,45 @@
+/* Add these styles at the beginning of your quizz.css file */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 30, 77, 0.9);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.developer-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #BB86FC;
+}
+
+/* Adjust the body padding to account for the fixed header */
+body {
+    padding-top: 50px;
+}
+
+/* Adjust the .app top margin to avoid overlap with the header */
+.app {
+    margin-top: 20px;
+}
+
 *
 {
     margin: 0;
@@ -290,3 +332,1155 @@ h2
 }
 
 /* ... (keep the rest of your existing CSS) ... */
+
+/* Dark mode styles */
+body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .app {
+    background: rgba(30, 30, 30, 0.95);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .btn, body.dark-mode #start-btn, body.dark-mode #next-btn {
+    background: #3700B3;
+    color: #ffffff;
+}
+
+body.dark-mode .btn:hover, body.dark-mode #start-btn:hover, body.dark-mode #next-btn:hover {
+    background: #6200EE;
+}
+
+body.dark-mode #question-container {
+    background: #1F1F1F;
+}
+
+body.dark-mode #progress-bar {
+    background: #333;
+}
+
+body.dark-mode #progress {
+    background: linear-gradient(90deg, #6200EE, #3700B3);
+}
+
+body.dark-mode #streak-container {
+    background-color: #1F1F1F;
+    color: #e0e0e0;
+}
+
+body.dark-mode #streak-label {
+    color: #BB86FC;
+}
+
+body.dark-mode .correct {
+    background: #03DAC5 !important;
+    color: #000000 !important;
+}
+
+body.dark-mode .incorrect {
+    background: #CF6679 !important;
+    color: #000000 !important;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: #BB86FC;
+    color: #121212;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background-color: #3700B3;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .dark-mode-toggle {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .dark-mode-toggle::after {
+        display: none;
+    }
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 70px; /* Adjust this value based on your navbar height */
+    right: 20px;
+    background-color: #001e4d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-toggle:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode-toggle i {
+    margin-right: 10px;
+}
+
+.dark-mode-toggle::after {
+    margin-left: 5px;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: #BB86FC;
+    color: #121212;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background-color: #3700B3;
+    color: white;
+}
+
+
+@media (max-width: 480px) {
+    .dark-mode-toggle {
+        top: auto; /* Reset top positioning */
+        bottom: 20px; /* Position at the bottom for mobile */
+        right: 20px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .dark-mode-toggle::after {
+        display: none;
+    }
+}
+
+#rules-screen {
+    text-align: left;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #000000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#rules-screen h2 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+#rules-screen ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#rules-screen li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+#rules-screen li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #001e4d;
+}
+
+#start-quiz-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #001e4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+/* Add these styles at the beginning of your quizz.css file */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 30, 77, 0.9);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.developer-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #BB86FC;
+}
+
+/* Adjust the body padding to account for the fixed header */
+body {
+    padding-top: 50px;
+}
+
+/* Adjust the .app top margin to avoid overlap with the header */
+.app {
+    margin-top: 20px;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+.app
+{
+    background: rgba(255, 255, 255, 0.9);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+    min-height: 600px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+.app:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+.app h1{
+    font-size: 28px;
+    color: #001e4d;
+    font-weight: 700;
+    border-bottom: 2px solid #001e4d;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+.app h1::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #0056b3;
+    transition: all 0.3s ease;
+}
+.app:hover h1::after {
+    width: 100%;
+    left: 0;
+}
+.quiz-container {
+    padding: 20px 0;
+}
+h2
+{
+    font-size: 22px ;
+    color: #001e4d;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#start-screen p {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.btn, #start-btn, #next-btn
+{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.btn::before, #start-btn::before, #next-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+}
+.btn:hover::before, #start-btn:hover::before, #next-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+#start-btn:hover, .btn:hover, #next-btn:hover
+{
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,86,179,0.3);
+}
+.btn:active, #start-btn:active, #next-btn:active
+{
+    transform: translateY(0);
+    box-shadow: none;
+}
+.btn:hover:not([disabled])
+{
+    background: #e6f0ff;
+    color: #001e4d;
+}
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+#next-btn
+{
+    width: 150px;
+    margin: 20px auto 0;
+    display: none;
+}
+.correct{
+    background: #4CAF50 !important;
+    color: white !important;
+}
+.incorrect
+{
+    background: #F44336 !important;
+    color: white !important;
+}
+.hidden {
+    display: none;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+#progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+#progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    transition: width 0.3s ease;
+}
+#question-container {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+#question-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+.particle {
+    position: absolute;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    animation: float 15s infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+.timer-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 36px;
+    font-weight: bold;
+    color: #001e4d;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulsate {
+    animation: pulsate 1.5s ease-in-out infinite;
+}
+
+.btn {
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.btn:hover {
+    transform: rotateX(10deg) translateY(-2px);
+}
+
+/* Add these new styles to your existing CSS */
+
+#difficulty-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #001e4d;
+}
+
+#streak-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#streak-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #001e4d;
+    margin-right: 10px;
+}
+
+#streak {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+    min-width: 30px;
+    text-align: center;
+}
+
+#hint-btn {
+    background: #FFA500;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#hint-btn:hover {
+    background: #FF8C00;
+}
+
+.timer {
+    font-size: 36px;
+    font-weight: bold;
+    color: #001e4d;
+    animation: pulse 1s infinite;
+}
+
+/* ... (keep the rest of your existing CSS) ... */
+
+/* Dark mode styles */
+body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .app {
+    background: rgba(30, 30, 30, 0.95);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .btn, body.dark-mode #start-btn, body.dark-mode #next-btn {
+    background: #3700B3;
+    color: #ffffff;
+}
+
+body.dark-mode .btn:hover, body.dark-mode #start-btn:hover, body.dark-mode #next-btn:hover {
+    background: #6200EE;
+}
+
+body.dark-mode #question-container {
+    background: #1F1F1F;
+}
+
+body.dark-mode #progress-bar {
+    background: #333;
+}
+
+body.dark-mode #progress {
+    background: linear-gradient(90deg, #6200EE, #3700B3);
+}
+
+body.dark-mode #streak-container {
+    background-color: #1F1F1F;
+    color: #e0e0e0;
+}
+
+body.dark-mode #streak-label {
+    color: #BB86FC;
+}
+
+body.dark-mode .correct {
+    background: #03DAC5 !important;
+    color: #000000 !important;
+}
+
+body.dark-mode .incorrect {
+    background: #CF6679 !important;
+    color: #000000 !important;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: #BB86FC;
+    color: #121212;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background-color: #3700B3;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .dark-mode-toggle {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .dark-mode-toggle::after {
+        display: none;
+    }
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 70px; /* Adjust this value based on your navbar height */
+    right: 20px;
+    background-color: #001e4d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-toggle:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode-toggle i {
+    margin-right: 10px;
+}
+
+.dark-mode-toggle::after {
+    margin-left: 5px;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: #BB86FC;
+    color: #121212;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background-color: #3700B3;
+    color: white;
+}
+
+
+@media (max-width: 480px) {
+    .dark-mode-toggle {
+        top: auto; /* Reset top positioning */
+        bottom: 20px; /* Position at the bottom for mobile */
+        right: 20px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .dark-mode-toggle::after {
+        display: none;
+    }
+}
+
+#rules-screen {
+    text-align: left;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#rules-screen h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#rules-screen ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#rules-screen li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+#rules-screen li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #001e4d;
+}
+
+#start-quiz-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #001e4d;
+    color: white;
+    border: none;
+/* Add these styles at the beginning of your quizz.css file */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 30, 77, 0.9);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.developer-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #BB86FC;
+}
+
+/* Adjust the body padding to account for the fixed header */
+body {
+    padding-top: 50px;
+}
+
+/* Adjust the .app top margin to avoid overlap with the header */
+.app {
+    margin-top: 20px;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+.app
+{
+    background: rgba(255, 255, 255, 0.9);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+    min-height: 600px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+.app:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+.app h1{
+    font-size: 28px;
+    color: #001e4d;
+    font-weight: 700;
+    border-bottom: 2px solid #001e4d;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+.app h1::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #0056b3;
+    transition: all 0.3s ease;
+}
+.app:hover h1::after {
+    width: 100%;
+    left: 0;
+}
+.quiz-container {
+    padding: 20px 0;
+}
+h2
+{
+    font-size: 22px ;
+    color: #001e4d;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#start-screen p {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.btn, #start-btn, #next-btn
+{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.btn::before, #start-btn::before, #next-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+}
+.btn:hover::before, #start-btn:hover::before, #next-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+#start-btn:hover, .btn:hover, #next-btn:hover
+{
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,86,179,0.3);
+}
+.btn:active, #start-btn:active, #next-btn:active
+{
+    transform: translateY(0);
+    box-shadow: none;
+}
+.btn:hover:not([disabled])
+{
+    background: #e6f0ff;
+    color: #001e4d;
+}
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+#next-btn
+{
+    width: 150px;
+    margin: 20px auto 0;
+    display: none;
+}
+.correct{
+    background: #4CAF50 !important;
+    color: white !important;
+}
+.incorrect
+{
+    background: #F44336 !important;
+    color: white !important;
+}
+.hidden {
+    display: none;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+#progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+#progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    transition: width 0.3s ease;
+}
+#question-container {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+#question-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+.particle {
+    position: absolute;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    animation: float 15s infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+.timer-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 36px;
+    font-weight: bold;
+    color: #001e4d;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulsate {
+    animation: pulsate 1.5s ease-in-out infinite;
+}
+
+.btn {
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.btn:hover {
+    transform: rotateX(10deg) translateY(-2px);
+}
+
+/* Add these new styles to your existing CSS */
+
+#difficulty-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #001e4d;
+}
+
+#streak-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#streak-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #001e4d;
+    margin-right: 10px;
+}
+
+#streak {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+    min-width: 30px;
+    text-align: center;
+}
+
+#hint-btn {
+    background: #FFA500;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#hint-btn:hover {
+    background: #FF8C00;
+}
+
+.timer {
+    font-size: 36px;
+    font-weight: bold;
+    color: #001e4d;
+    animation: pulse 1s infinite;
+}
+
+/* ... (keep the rest of your existing CSS) ... */
+
+/* Dark mode styles */
+body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .app {
+    background: rgba(30, 30, 30, 0.95);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .btn, body.dark-mode #start-btn, body.dark-mode #next-btn {
+    background: #3700B3;
+    color: #ffffff;
+}
+
+body.dark-mode .btn:hover, body.dark-mode #start-btn:hover, body.dark-mode #next-btn:hover {
+    background: #6200EE;
+}
+
+body.dark-mode #question-container {
+    background: #1F1F1F;
+}
+
+body.dark-mode #progress-bar {
+    background: #333;
+}
+
+body.dark-mode #progress {
+    background: linear-gradient(90deg, #6200EE, #3700B3);
+}
+
+body.dark-mode #streak-container {
+    background-color: #1F1F1F;
+    color: #e0e0e0;
+}
+
+body.dark-mode #streak-label {
+    color: #BB86FC;
+}
+
+body.dark-mode .correct {
+    background: #03DAC5 !important;
+    color: #000000 !important;
+}
+
+body.dark-mode .incorrect {
+    background: #CF6679 !important;
+    color: #000000 !important;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: #BB86FC;
+    color: #121212;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background-color: #3700B3;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .dark-mode-toggle {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .dark-mode-toggle::after {
+        display: none;
+    }
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 70px; /* Adjust this value based on your navbar height */
+    right: 20px;
+    background-color: #001e4d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-toggle:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode-toggle i {
+    margin-right: 10px;
+}
+
+.dark-mode-toggle::after {
+    margin-left: 5px;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: #BB86FC;
+    color: #121212;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background-color: #3700B3;
+    color: white;
+}
+
+
+@media (max-width: 480px) {
+    .dark-mode-toggle {
+        top: auto; /* Reset top positioning */
+        bottom: 20px; /* Position at the bottom for mobile */
+        right: 20px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .dark-mode-toggle::after {
+        display: none;
+    }
+}
+}

@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (response.ok) {
                     const data = await response.json();
                     allUserData = data;
+                    console.log(data);
                     displayUserScores(allUserData);
                 } else if (response.status === 404) {
                     showError('No users found');

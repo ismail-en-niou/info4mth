@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="quizz.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <title>IT Quiz | ismail_info</title>
 </head>
 <body>
+    <header>
+        <div class="developer-info">
+            <p>Dev by Ismail En-niou</p>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/ismail-en-niou" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ismail-en-niou-898566275/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:ismail.enniou@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </header>
    <div class="app">
         <h1>IT Knowledge Quiz</h1>
         <div class="quiz-container">
@@ -22,6 +33,19 @@
                     <option value="hard">Hard</option>
                 </select>
                 <button id="start-btn"><i class="fas fa-play"></i> Start Quiz</button>
+            </div>
+            <div id="rules-screen" class="hidden">
+                <h2>Quiz Rules</h2>
+                <ul>
+                    <li>You will have 30 seconds for each question.</li>
+                    <li>Once you select an answer, it cannot be changed.</li>
+                    <li>You can't skip questions or go back to previous ones.</li>
+                    <li>Each correct answer earns you one point.</li>
+                    <li>There's no penalty for wrong answers.</li>
+                    <li>You can use the hint button once per question, if available.</li>
+                    <li>Leaving the page or switching tabs is considered cheating and will end the quiz.</li>
+                </ul>
+                <button id="start-quiz-btn">I Understand, Start Quiz</button>
             </div>
             <div id="quiz-screen" class="hidden">
                 <div class="timer-container">
@@ -42,8 +66,11 @@
         </div>
    </div> 
    <div class="particles"></div>
-   <audio id="correct-sound" src="correct.mp3"></audio>
-   <audio id="incorrect-sound" src="incorrect.mp3"></audio>
-   <script src="quizz.js"></script>
+   <audio id="correct-sound" src="correct-6033.mp3"></audio>
+   <audio id="incorrect-sound" src="wrong-answer-129254.mp3"></audio>
+   <div class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+   <script src="quizz.js" type="module"></script>
 </body>
 </html>
