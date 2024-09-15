@@ -1,3 +1,4 @@
+
 const question = [
     // Easy questions (10)
     {
@@ -175,174 +176,164 @@ const question = [
             { text: "To sort an array", correct: false}
         ],
         difficulty: 'medium',
-        hint: "The 'map' function is a higher-order function that transforms an array."
-    },
-    {
-        question: "What is a promise in JavaScript?",
-        answers: [
-            { text: "A guarantee that a function will execute successfully", correct: false},
-            { text: "An object representing the eventual completion or failure of an asynchronous operation", correct: true},
-            { text: "A way to make synchronous code asynchronous", correct: false},
-            { text: "A method to improve code performance", correct: false}
-        ],
-        difficulty: 'medium',
-        hint: "Promises are used to handle asynchronous operations in JavaScript."
-    },
-    {
-        question: "What is the purpose of the 'bind' method in JavaScript?",
-        answers: [
-            { text: "To join two arrays", correct: false},
-            { text: "To create a new function with a fixed 'this' value", correct: true},
-            { text: "To bind event listeners to DOM elements", correct: false},
-            { text: "To bind two objects together", correct: false}
-        ],
-        difficulty: 'medium',
-        hint: "The 'bind' method is used to create a new function that, when called, has its 'this' keyword set to a specific value."
-    },
-    {
-        question: "What is the difference between 'call' and 'apply' methods in JavaScript?",
-        answers: [
-            { text: "There is no difference", correct: false},
-            { text: "'call' accepts an argument list, while 'apply' accepts a single array of arguments", correct: true},
-            { text: "'apply' accepts an argument list, while 'call' accepts a single array of arguments", correct: false},
-            { text: "'call' is used for functions, while 'apply' is used for methods", correct: false}
-        ],
-        difficulty: 'medium',
-        hint: "Both 'call' and 'apply' are used to invoke a function with a given 'this' value, but they handle arguments differently."
-    },
-    {
-        question: "What is the purpose of the 'prototype' property in JavaScript?",
-        answers: [
-            { text: "To create private variables", correct: false},
-            { text: "To add properties and methods to object constructors", correct: true},
-            { text: "To define the data type of a variable", correct: false},
-            { text: "To create a copy of an object", correct: false}
-        ],
-        difficulty: 'medium',
-        hint: "The 'prototype' property is used to add methods and properties to object constructors in JavaScript."
-    },
-    // Hard questions (10)
-    {
-        question: "What is a closure in JavaScript?",
-        answers: [
-            { text: "A way to close the browser window", correct: false},
-            { text: "A function with access to variables in its outer lexical scope", correct: true},
-            { text: "A method to end a loop", correct: false},
-            { text: "A way to close a database connection", correct: false}
-        ],
-        difficulty: 'hard',
-        hint: "A closure is a function that has access to its own scope, the outer function's scope, and the global scope."
+        hint: "The 'map' function is used to transform arrays in JavaScript."
     },
     {
         question: "What is the purpose of the 'reduce' function in JavaScript?",
         answers: [
-            { text: "To decrease the size of an array", correct: false},
-            { text: "To execute a reducer function on each element of the array, resulting in a single output value", correct: true},
-            { text: "To remove duplicate elements from an array", correct: false},
-            { text: "To convert an array to a string", correct: false}
+            { text: "To reduce the size of an array", correct: false},
+            { text: "To apply a function against an accumulator and each element of the array (from left to right) to reduce it to a single value", correct: true},
+            { text: "To remove duplicates from an array", correct: false},
+            { text: "To create a new array", correct: false}
         ],
-        difficulty: 'hard',
-        hint: "The 'reduce' function is a powerful array method that can be used for various purposes."
+        difficulty: 'medium',
+        hint: "The 'reduce' function is used to accumulate values in an array."
     },
     {
-        question: "What is event bubbling in JavaScript?",
+        question: "What is the purpose of the 'filter' function in JavaScript?",
         answers: [
-            { text: "A way to create multiple events simultaneously", correct: false},
-            { text: "The process where an event triggers on the innermost target element and propagates up through its ancestors", correct: true},
-            { text: "A method to prevent event listeners from being triggered", correct: false},
-            { text: "A technique to improve event handling performance", correct: false}
+            { text: "To filter out elements that do not pass a test implemented by a provided function", correct: true},
+            { text: "To filter out null values from an array", correct: false},
+            { text: "To sort an array", correct: false},
+            { text: "To transform each element of an array", correct: false}
         ],
-        difficulty: 'hard',
-        hint: "Event bubbling is a fundamental concept in event propagation in JavaScript."
+        difficulty: 'medium',
+        hint: "The 'filter' function is used to create a new array with all elements that pass a test."
     },
     {
-        question: "What is the purpose of the 'preventDefault()' method in JavaScript?",
+        question: "What is the purpose of the 'find' function in JavaScript?",
         answers: [
-            { text: "To stop event propagation", correct: false},
-            { text: "To prevent the default action associated with an event from occurring", correct: true},
-            { text: "To remove all event listeners from an element", correct: false},
-            { text: "To prevent the event from bubbling up the DOM tree", correct: false}
+            { text: "To find an element in an array that satisfies a provided testing function", correct: true},
+            { text: "To find the maximum value in an array", correct: false},
+            { text: "To find the index of an element in an array", correct: false},
+            { text: "To sort an array", correct: false}
         ],
-        difficulty: 'hard',
-        hint: "The 'preventDefault()' method is used to cancel the default behavior of an event."
+        difficulty: 'medium',
+        hint: "The 'find' function returns the first element that satisfies a testing function."
     },
     {
-        question: "What is the purpose of the 'stopPropagation()' method in JavaScript?",
+        question: "What is the purpose of the 'slice' function in JavaScript?",
         answers: [
-            { text: "To prevent the default action associated with an event", correct: false},
-            { text: "To stop the event from bubbling up the DOM tree", correct: true},
-            { text: "To remove all event listeners from an element", correct: false},
-            { text: "To pause the execution of event handlers", correct: false}
+            { text: "To slice a string into an array", correct: false},
+            { text: "To remove elements from an array", correct: false},
+            { text: "To return a shallow copy of a portion of an array into a new array object", correct: true},
+            { text: "To transform each element of an array", correct: false}
         ],
-        difficulty: 'hard',
-        hint: "The 'stopPropagation()' method is used to stop event propagation in JavaScript."
+        difficulty: 'medium',
+        hint: "The 'slice' function is used to extract a section of an array."
     },
-    {
-        question: "What is the difference between 'localStorage' and 'sessionStorage' in JavaScript?",
-        answers: [
-            { text: "There is no difference", correct: false},
-            { text: "'localStorage' persists even after the browser window is closed, while 'sessionStorage' is cleared when the page session ends", correct: true},
-            { text: "'sessionStorage' persists even after the browser window is closed, while 'localStorage' is cleared when the page session ends", correct: false},
-            { text: "'localStorage' is used for storing strings, while 'sessionStorage' is used for storing objects", correct: false}
-        ],
-        difficulty: 'hard',
-        hint: "'localStorage' and 'sessionStorage' are both used for client-side storage in JavaScript, but they have different persistence behaviors."
-    },
-    {
-        question: "What is a generator function in JavaScript?",
-        answers: [
-            { text: "A function that generates random numbers", correct: false},
-            { text: "A function that can be paused and resumed, yielding multiple values", correct: true},
-            { text: "A function that creates other functions", correct: false},
-            { text: "A function that automatically generates documentation", correct: false}
-        ],
-        difficulty: 'hard',
-        hint: "Generator functions are special functions that can be exited and later re-entered while maintaining their context."
-    },
-    {
-        question: "What is the purpose of the 'Symbol' data type in JavaScript?",
-        answers: [
-            { text: "To create unique identifiers", correct: true},
-            { text: "To represent mathematical symbols", correct: false},
-            { text: "To encrypt data", correct: false},
-            { text: "To define constants", correct: false}
-        ],
-        difficulty: 'hard',
-        hint: "Symbols are a unique primitive data type in JavaScript."
-    },
-    {
-        question: "What is the purpose of the 'Proxy' object in JavaScript?",
-        answers: [
-            { text: "To create a new object", correct: false},
-            { text: "To intercept and customize fundamental object operations", correct: true},
-            { text: "To handle asynchronous operations", correct: false},
-            { text: "To create a copy of an object", correct: false}
-        ],
-        difficulty: 'hard',
-        hint: "The 'Proxy' object is used to create a wrapper for another object, allowing you to intercept and customize fundamental object operations."
-    },
-    {
-        question: "What is the purpose of the 'Reflect' object in JavaScript?",
-        answers: [
-            { text: "To create a new object", correct: false},
-            { text: "To intercept and customize fundamental object operations", correct: false},
-            { text: "To handle asynchronous operations", correct: false},
-            { text: "To provide methods for interceptable JavaScript operations", correct: true}
-        ],
-        difficulty: 'hard',
-        hint: "The 'Reflect' object provides methods for interceptable JavaScript operations, making it easier to work with objects and proxies."
-    },
-    {
-        question: "What is the purpose of the 'Intl' object in JavaScript?",
-        answers: [
-            { text: "To create a new object", correct: false},
-            { text: "To intercept and customize fundamental object operations", correct: false},
-            { text: "To handle asynchronous operations", correct: false},
-            { text: "To provide language sensitive string comparison, number formatting, and date/time formatting", correct: true}
-        ],
-        difficulty: 'hard',
-        hint: "The 'Intl' object provides language sensitive string comparison, number formatting, and date/time formatting capabilities in JavaScript."
-    }
+    // Hard questions (5)
+   // Additional Hard Questions (10)
+{
+    question: "What is the time complexity of binary search in a sorted array?",
+    answers: [
+        { text: "O(n)", correct: false},
+        { text: "O(n log n)", correct: false},
+        { text: "O(log n)", correct: true},
+        { text: "O(1)", correct: false}
+    ],
+    difficulty: 'hard',
+    hint: "Binary search halves the search space with each step."
+},
+{
+    question: "What is a 'deadlock' in the context of operating systems?",
+    answers: [
+        { text: "A condition where two or more processes are stuck, waiting for each other to release resources", correct: true},
+        { text: "A situation where processes are terminated unexpectedly", correct: false},
+        { text: "A technique to prevent processes from using shared resources", correct: false},
+        { text: "A tool used to detect memory leaks in processes", correct: false}
+    ],
+    difficulty: 'hard',
+    hint: "Deadlock is related to resource allocation and mutual waiting among processes."
+},
+{
+    question: "What is the 'halting problem' in theoretical computer science?",
+    answers: [
+        { text: "The problem of determining whether a given program will terminate or run forever", correct: true},
+        { text: "The issue of determining how many steps a program will take to finish", correct: false},
+        { text: "A method to optimize the performance of algorithms", correct: false},
+        { text: "A technique to pause a process until an event occurs", correct: false}
+    ],
+    difficulty: 'hard',
+    hint: "The halting problem is one of the most famous undecidable problems."
+},
+{
+    question: "What is the main difference between 'symmetric' and 'asymmetric' encryption?",
+    answers: [
+        { text: "Symmetric encryption uses the same key for both encryption and decryption, while asymmetric encryption uses different keys", correct: true},
+        { text: "Asymmetric encryption is faster than symmetric encryption", correct: false},
+        { text: "Symmetric encryption uses multiple keys, while asymmetric uses only one key", correct: false},
+        { text: "There is no difference, they are just two names for the same technique", correct: false}
+    ],
+    difficulty: 'hard',
+    hint: "Asymmetric encryption involves a public and private key pair."
+},
+{
+    question: "What does NP-complete mean in the context of computational complexity?",
+    answers: [
+        { text: "A problem that is in NP and every problem in NP can be reduced to it in polynomial time", correct: true},
+        { text: "A problem that has no solution", correct: false},
+        { text: "A problem that can only be solved using exponential time", correct: false},
+        { text: "A problem that is unsolvable", correct: false}
+    ],
+    difficulty: 'hard',
+    hint: "NP-complete problems are the hardest problems in NP."
+},
+{
+    question: "In database management, what is a 'foreign key'?",
+    answers: [
+        { text: "A key used to uniquely identify records in a table", correct: false},
+        { text: "A field in one table that refers to the primary key in another table", correct: true},
+        { text: "A key used to encrypt sensitive data in the database", correct: false},
+        { text: "A key used to join two tables together", correct: false}
+    ],
+    difficulty: 'hard',
+    hint: "Foreign keys are used to maintain referential integrity between tables."
+},
+{
+    question: "What is the purpose of the 'CAP theorem' in distributed systems?",
+    answers: [
+        { text: "It states that no distributed system can achieve consistency, availability, and partition tolerance simultaneously", correct: true},
+        { text: "It ensures that all nodes in a distributed system are synchronized", correct: false},
+        { text: "It provides a way to optimize the speed of a distributed database", correct: false},
+        { text: "It guarantees that data is never lost in distributed systems", correct: false}
+    ],
+    difficulty: 'hard',
+    hint: "CAP theorem explains the trade-offs in distributed system design."
+},
+{
+    question: "What is a 'Turing machine'?",
+    answers: [
+        { text: "A theoretical machine that can simulate any algorithmic computation", correct: true},
+        { text: "A machine used to break encryption codes", correct: false},
+        { text: "A physical machine that solves complex math problems", correct: false},
+        { text: "A machine that only works with binary code", correct: false}
+    ],
+    difficulty: 'hard',
+    hint: "Turing machines are used to model computation and decision problems."
+},
+{
+    question: "What is 'memoization' in computer programming?",
+    answers: [
+        { text: "A technique used to store the results of expensive function calls and reuse them when the same inputs occur again", correct: true},
+        { text: "A way to compress data in memory for faster access", correct: false},
+        { text: "A method of freeing unused memory from the system", correct: false},
+        { text: "A technique used to improve sorting algorithms", correct: false}
+    ],
+    difficulty: 'hard',
+    hint: "Memoization is a dynamic programming technique to avoid redundant computations."
+},
+{
+    question: "What is 'quantum computing'?",
+    answers: [
+        { text: "A type of computing that uses qubits to perform complex calculations much faster than classical computers", correct: true},
+        { text: "A form of computing that simulates parallel processing on a traditional CPU", correct: false},
+        { text: "A process of using quantum numbers to store data", correct: false},
+        { text: "A technique to solve problems using probability theory", correct: false}
+    ],
+    difficulty: 'hard',
+    hint: "Quantum computers use the principles of quantum mechanics to solve certain problems more efficiently."
+}
 ];
 
 export { question };
