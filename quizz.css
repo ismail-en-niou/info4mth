@@ -2,78 +2,291 @@
 {
     margin: 0;
     padding: 0;
-    font-family: 'poppins' , sans-serif;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 body{
-    background: #001e4d;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
 }
 .app
 {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
     width: 90%;
     max-width: 600px;
-    margin: 100px auto 0;
-    border-radius:10px  ;
+    border-radius: 20px;
+    min-height: 600px;
     padding: 30px;
-    box-shadow: 5px 6px 7px #222;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+.app:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 .app h1{
-    font-weight: 25px ;
+    font-size: 28px;
     color: #001e4d;
-    font-weight: 600;
-    border-bottom: 1px solid #333;
-    padding-bottom: 30px;
+    font-weight: 700;
+    border-bottom: 2px solid #001e4d;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
 }
-.quizz
-{
+.app h1::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #0056b3;
+    transition: all 0.3s ease;
+}
+.app:hover h1::after {
+    width: 100%;
+    left: 0;
+}
+.quiz-container {
     padding: 20px 0;
 }
 h2
 {
-    font-size: 18px ;
+    font-size: 22px ;
     color: #001e4d;
     font-weight: 600;
+    margin-bottom: 20px;
 }
-.btn
-{
-    background: #fff;
-    color:#222;
-    font-weight: 500;
-    width: 100%;
-    border: 1px solid #222;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: left;
-    border-radius:10px ;
-    cursor: pointer;
-    transition: all 0.3s;
+#start-screen p {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
 }
-.btn:hover:not([disabled])
-{
-    background: #222;
-    color: #fff;
-}
-.btn:disabled {
-    cursor: no-drop;
-}
-#next-btn
+.btn, #start-btn, #next-btn
 {
     background: #001e4d;
     color: #fff;
     font-weight: 500;
-    width: 150px;
-    border: 0;
-    padding: 10px ; 
-    margin: 20px auto 0;
-    border-radius:15px ;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 50px;
     cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.btn::before, #start-btn::before, #next-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+}
+.btn:hover::before, #start-btn:hover::before, #next-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+#start-btn:hover, .btn:hover, #next-btn:hover
+{
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,86,179,0.3);
+}
+.btn:active, #start-btn:active, #next-btn:active
+{
+    transform: translateY(0);
+    box-shadow: none;
+}
+.btn:hover:not([disabled])
+{
+    background: #e6f0ff;
+    color: #001e4d;
+}
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+#next-btn
+{
+    width: 150px;
+    margin: 20px auto 0;
     display: none;
 }
 .correct{
-    background: #9aeabc;
+    background: #4CAF50 !important;
+    color: white !important;
 }
 .incorrect
 {
-    background: #ff9393;
+    background: #F44336 !important;
+    color: white !important;
 }
+.hidden {
+    display: none;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+#progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+#progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    transition: width 0.3s ease;
+}
+#question-container {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+#question-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+.particle {
+    position: absolute;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    animation: float 15s infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+.timer-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 36px;
+    font-weight: bold;
+    color: #001e4d;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulsate {
+    animation: pulsate 1.5s ease-in-out infinite;
+}
+
+.btn {
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.btn:hover {
+    transform: rotateX(10deg) translateY(-2px);
+}
+
+/* Add these new styles to your existing CSS */
+
+#difficulty-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #001e4d;
+}
+
+#streak-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#streak-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #001e4d;
+    margin-right: 10px;
+}
+
+#streak {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+    min-width: 30px;
+    text-align: center;
+}
+
+#hint-btn {
+    background: #FFA500;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#hint-btn:hover {
+    background: #FF8C00;
+}
+
+.timer {
+    font-size: 36px;
+    font-weight: bold;
+    color: #001e4d;
+    animation: pulse 1s infinite;
+}
+
+/* ... (keep the rest of your existing CSS) ... */

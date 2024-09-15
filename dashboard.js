@@ -9,18 +9,32 @@ document.addEventListener('DOMContentLoaded', function() {
     async function fetchUserScores() {
         try {
             loader.style.display = 'block';
-            const response = await fetch('https://quizz-js.onrender.com/users-with-scores');
-            const data = await response.json();
-            
-            if (response.ok) {
-                allUserData = data;
-                displayUserScores(allUserData);
+            const token = localStorage.getItem('token');
+            if (token) {
+                console.log('Token found:', token); // Keep this for debugging
+                const response = await fetch('https://quizz-js.onrender.com/users-with-scores', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });  
+                if (response.ok) {
+                    const data = await response.json();
+                    allUserData = data;
+                    displayUserScores(allUserData);
+                } else if (response.status === 404) {
+                    showError('No users found');
+                } else {
+                    const errorText = await response.text();
+                    console.error('Server response:', errorText);
+                    throw new Error('Failed to fetch user data');
+                }
             } else {
-                showError('No users found');
+                showPlayWithoutLogin();
             }
         } catch (error) {
             console.error('Error:', error);
-            showError('Failed to fetch user data');
+            showError(error.message || 'Failed to fetch user data');
         } finally {
             loader.style.display = 'none';
         }
@@ -82,3 +96,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial load of all users' scores
     fetchUserScores();
 });
+
+function showPlayWithoutLogin() {
+    userScoresBody.innerHTML = `
+        <tr>
+            <td colspan="4">
+                <p>You are not logged in. You can still play the game, but your scores won't be saved.</p>
+                <button id="playWithoutLoginBtn">login first</button>
+            </td>
+        </tr>
+    `;
+    document.getElementById('playWithoutLoginBtn').addEventListener('click', startGameWithoutLogin);
+}
+
+function startGameWithoutLogin() {
+    // Redirect to the game page or start the game logic here
+    window.location.href = 'login.html';  // Adjust this to your game page URL
+}
