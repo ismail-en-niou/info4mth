@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (response.ok) {
                     localStorage.setItem("usertaf", data.userId);
                     localStorage.setItem("token", data.token);
-                    window.location.href = 'quizz.html';
+                    window.location.href = 'memo.html';
                 } else {
                     alert('Login failed: ' + data.error);
                 }
